@@ -1,22 +1,22 @@
 package main
 
 import (
-	"fetch/distros"
 	"bufio"
+	"fetch/distros"
 	"fmt"
-	"strings"
 	"os"
+	"strings"
 )
 
 func detectDistro() (string, error) {
 	file, err := os.Open("/etc/os-release")
 	if err != nil {
 		return "", err
- 	}
+	}
 
-  	defer file.Close()
+	defer file.Close()
 
-   	scanner := bufio.NewScanner(file)
+	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		line := scanner.Text()
 
@@ -42,23 +42,29 @@ func main() {
 	}
 
 	switch distro {
-		case "linuxmint":
-			distros.MintFetch()
-		case "debian":
-			distros.DebianFetch()
-		case "nixos":
-			distros.NixFetch()
-		case "artix":
-			distros.ArtixFetch()
-		case "android":
-			distros.AndroidFetch()
-		case "arch":
-			distros.ArchFetch()
-		case "freebsd":
-			distros.FreebsdFetch()
-		case "gentoo":
-			distros.GentooFetch()
-		default:
-			fmt.Printf("Дистрибутив %s не поддерживается dfetch\n", distro)
+	case "linuxmint":
+		distros.MintFetch()
+	case "debian":
+		distros.DebianFetch()
+	case "nixos":
+		distros.NixFetch()
+	case "artix":
+		distros.ArtixFetch()
+	case "android":
+		distros.AndroidFetch()
+	case "arch":
+		distros.ArchFetch()
+	case "endeavouros":
+		distros.EndeavourFetch()
+	case "freebsd":
+		distros.FreebsdFetch()
+	case "gentoo":
+		distros.GentooFetch()
+	case "void":
+		distros.VoidFetch()
+	case "devuan":
+		distros.DevuanFetch()
+	default:
+		fmt.Printf("Дистрибутив %s не поддерживается dfetch\n", distro)
 	}
 }
