@@ -1,19 +1,19 @@
 # Binary file name
-BINARY = bin/fetch
+BINARY = ~/dfetch/bin/dfetch
+
+CC = clang
 
 # source code file
-SRC = main.go 
+SRCS = $(wildcard src/*.c src/lib/distros/*.c)
+CFLAGS = -Wall -Wextra -Isrc/lib
 
-# GoLang compile and linking flags
-GO_FLAGS = -ldflags="-s -w"
+OBJS = $(SRCS:.c=.o)
 
-build:
-	@echo "Сборка кода фетча... "
-	@go build -o $(BINARY) $(GO_FLAGS) $(SRC) 
+$(BINARY): $(OBJS)
+	$(CC) $(OBJS) -o $(BINARY)
 
-test:
-	@echo "Запуск тестов... "
-	@go test ./...
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@echo "Очистка бинарей... "
@@ -22,10 +22,3 @@ clean:
 run: build 
 	@./$(BINARY)
 
-help:
-	@echo "Доступные команды:"
-	@echo "  make build   - Собрать бинарный файл"
-	@echo "  make test    - Запустить тесты"
-	@echo "  make clean   - Очистить артефакты"
-	@echo "  make run     - Собрать и запустить"
-	@echo "  make help    - Показать это сообщение"
