@@ -16,10 +16,10 @@ $(BINARY): $(OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 install:
-	sudo cp $(BINARY) /usr/bin/
+	cp $(BINARY) /usr/bin/
 
 uninstall:
-	sudo rm -f /usr/bin/dfetch
+	rm -f /usr/bin/dfetch
 
 clean:
 	@echo "Очистка бинарей... "
