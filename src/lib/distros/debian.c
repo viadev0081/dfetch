@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "distros.h"
-#include "get_parameters.h"
-#include "colors.h"
+#include "../distros.h"
+#include "../get_parameters.h"
+#include "../colors.h"
 
 void debian_fetch() {
     char * username = get_user_name();
@@ -33,17 +33,18 @@ void debian_fetch() {
         return;
     }
 
-    printf(RED_COLOR " " RESET_COLOR "\n");
-    printf(RED_COLOR "    .---.    " RESET_COLOR RED_COLOR " User:   %s" RESET_COLOR "\n", username);
-    printf(RED_COLOR "   /  __ \\  " RESET_COLOR MAGENTA_COLOR "───────────────────" RESET_COLOR "\n");
-    printf(RED_COLOR "  |  /    |  " RESET_COLOR RED_COLOR "󰌢 Host:   %s" RESET_COLOR "\n", hostname);
-    printf(RED_COLOR "  |  \\___-   " RESET_COLOR RED_COLOR " OS:     %s" RESET_COLOR "\n", osname);
-    printf(RED_COLOR "  -_         " RESET_COLOR RED_COLOR " Kernel: %s" RESET_COLOR "\n", kernel);
-    printf(RED_COLOR "    --_      " RESET_COLOR RED_COLOR " Shell:  %s" RESET_COLOR "\n", shell);
-    printf(RED_COLOR "       --_   " RESET_COLOR RED_COLOR " DE/WM:  %s" RESET_COLOR "\n", de_wm);
-    printf(RED_COLOR "             " RESET_COLOR RED_COLOR " Init system:%s" RESET_COLOR "\n", init);
-    printf(RED_COLOR "    DEBIAN   " RESET_COLOR RED_COLOR "" RESET_COLOR "\n");
-    printf(RED_COLOR "             " RESET_COLOR RED_COLOR "█" GREEN_COLOR "█" YELLOW_COLOR "█" BLUE_COLOR "█" MAGENTA_COLOR "█" CYAN_COLOR "█" RESET_COLOR "\n");
+    printf(RED_COLOR "             " RESET_COLOR "\n");
+    printf(RED_COLOR "    .---.    " RESET_COLOR RED_COLOR     " User:        " RESET_COLOR "%s" RESET_COLOR "\n", username);
+    printf(RED_COLOR "   /  __ \\  " RESET_COLOR MAGENTA_COLOR " ─────────────────────────" RESET_COLOR "\n");
+    printf(RED_COLOR "  |  /    |  " RESET_COLOR RED_COLOR     "󰌢 Host:        " RESET_COLOR "%s" RESET_COLOR "\n", hostname);
+    printf(RED_COLOR "  |  \\___-   " RESET_COLOR RED_COLOR    " OS:          " RESET_COLOR "%s" RESET_COLOR "\n", osname);
+    printf(RED_COLOR "  -_         " RESET_COLOR RED_COLOR     " Kernel:      " RESET_COLOR "%s" RESET_COLOR "\n", kernel);
+    printf(RED_COLOR "    --_      " RESET_COLOR RED_COLOR     " Shell:       " RESET_COLOR "%s" RESET_COLOR "\n", shell);
+    printf(RED_COLOR "       --_   " RESET_COLOR RED_COLOR     " DE/WM:       " RESET_COLOR "%s" RESET_COLOR "\n", de_wm);
+    printf(RED_COLOR "             " RESET_COLOR RED_COLOR     " Init system: " RESET_COLOR "%s" RESET_COLOR "\n", init);
+    printf(RED_COLOR "    DEBIAN   " RESET_COLOR RED_COLOR     "" RESET_COLOR "\n");
+    printf(RED_COLOR "             " RESET_COLOR RED_COLOR " █ " GREEN_COLOR " █ "
+        YELLOW_COLOR " █ " BLUE_COLOR " █ " MAGENTA_COLOR " █ " CYAN_COLOR " █ " RESET_COLOR "\n");
     printf("\n");
 
     free(username);
