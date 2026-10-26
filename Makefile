@@ -15,10 +15,16 @@ $(BINARY): $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+install:
+	sudo cp $(BINARY) /usr/bin/
+
+uninstall:
+	sudo rm -f /usr/bin/dfetch
+
 clean:
 	@echo "Очистка бинарей... "
 	@rm -f $(BINARY) 
+	rm -f $(OBJS)
 
-run: build 
-	@./$(BINARY)
-
+run: 
+	$(BINARY)
