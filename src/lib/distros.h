@@ -1,6 +1,7 @@
 #ifndef DISTORS_H
 #define DISTORS_H
 
+void aerynos_fetch();
 void android_fetch();
 void arch_fetch();
 void artix_fetch();
