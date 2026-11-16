@@ -34,19 +34,22 @@ void void_fetch() {
     }
 
     printf(GREEN_COLOR " " RESET_COLOR "\n");
-    printf(GREEN_COLOR "      _______      " RESET_COLOR GREEN_COLOR   " User:        " RESET_COLOR "%s" RESET_COLOR "\n", username);
-    printf(GREEN_COLOR "   _ \\______ -    " RESET_COLOR MAGENTA_COLOR " ─────────────────────────" RESET_COLOR "\n");
-    printf(GREEN_COLOR "  | \\  ___  \\ |  " RESET_COLOR GREEN_COLOR   "  󰌢 Host:         " RESET_COLOR "%s" RESET_COLOR "\n", hostname);
-    printf(GREEN_COLOR "  | | /   \\ | |   " RESET_COLOR GREEN_COLOR   "  OS:           " RESET_COLOR "%s" RESET_COLOR "\n", osname);
-    printf(GREEN_COLOR "  | | \\___/ | |   " RESET_COLOR GREEN_COLOR   "  Kernel:       " RESET_COLOR "%s" RESET_COLOR "\n", kernel);
-    printf(GREEN_COLOR "  | \\______ \\_|  " RESET_COLOR GREEN_COLOR   "   Shell:        " RESET_COLOR "%s" RESET_COLOR "\n", shell);
-    printf(GREEN_COLOR "   -_______\\      " RESET_COLOR GREEN_COLOR   "  DE/WM:        " RESET_COLOR "%s" RESET_COLOR "\n", de_wm);
-    printf(GREEN_COLOR "                  " RESET_COLOR GREEN_COLOR   "  Init system:  " RESET_COLOR "%s" RESET_COLOR "\n", init);
-    printf(GREEN_COLOR "      VOID         " RESET_COLOR GREEN_COLOR "" RESET_COLOR "\n");
-    printf(GREEN_COLOR "                   " RESET_COLOR RED_COLOR " █ " 
-        GREEN_COLOR " █ " YELLOW_COLOR " █ " 
-        BLUE_COLOR  " █ " MAGENTA_COLOR " █ " 
-        CYAN_COLOR  " █ " RESET_COLOR "\n"
+    printf(GREEN_COLOR "      _______    "   RESET_COLOR GREEN_COLOR " User:        %s" RESET_COLOR "\n", username);
+    printf(GREEN_COLOR "   _ \\______ -   "  RESET_COLOR MAGENTA_COLOR "─────────────────────────" RESET_COLOR "\n");
+    printf(GREEN_COLOR "  | \\  ___  \\ |  " RESET_COLOR GREEN_COLOR "󰌢 Host:        %s" RESET_COLOR "\n", hostname);
+    printf(GREEN_COLOR "  | | /   \\ | |  "  RESET_COLOR GREEN_COLOR " OS:          %s" RESET_COLOR "\n", osname);
+    printf(GREEN_COLOR "  | | \\___/ | |  "  RESET_COLOR GREEN_COLOR " Kernel:      %s" RESET_COLOR "\n", kernel);
+    printf(GREEN_COLOR "  | \\______ \\_|  " RESET_COLOR GREEN_COLOR " Shell:       %s" RESET_COLOR "\n", shell);
+    printf(GREEN_COLOR "   -_______\\     "  RESET_COLOR GREEN_COLOR " DE/WM:       %s" RESET_COLOR "\n", de_wm);
+    printf(GREEN_COLOR "                 "   RESET_COLOR GREEN_COLOR " Init system: %s" RESET_COLOR "\n", init);
+    printf(GREEN_COLOR "      VOID       "   RESET_COLOR GREEN_COLOR "" RESET_COLOR "\n");
+    printf(GREEN_COLOR "                 "   RESET_COLOR RED_COLOR " █ " 
+            GREEN_COLOR " █ " 
+            YELLOW_COLOR " █ " 
+            BLUE_COLOR " █ " 
+            MAGENTA_COLOR " █ " 
+            CYAN_COLOR " █ " 
+            RESET_COLOR "\n"
     );
     
     printf("\n");
