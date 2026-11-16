@@ -69,6 +69,9 @@ int main() {
     else if (strcmp(distro, "arch") == 0) {
         arch_fetch();
     }
+    else if (strcmp(distro, "aerynos") == 0) {
+        aerynos_fetch();
+    }
     else if (strcmp(distro, "endeavouros") == 0) {
         endeavour_fetch();
     }
